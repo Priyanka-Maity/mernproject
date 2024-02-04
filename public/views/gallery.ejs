@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="../style/gallery.css">
+</head>
+
+<body>
+    <div id="gallery">
+        <div class="gallery-top">
+            <div class="nav-logo">
+                <a href="/home"><img src="../image/logo1.jpg" alt="logo"></a>
+            </div>
+        </div>
+
+        <div class="gallery-img">
+            <img class="gal" src="../image/gall.jpg" alt="gallery-title-image">
+            <div class="gal-tag" style="font-family: 'MerriWeather', sans-serif;">Images</div>
+        </div>
+
+        <div class="plan-des">
+            <div
+                style="font-family: 'MerriWeather', sans-serif;padding-bottom:60px;text-align: center;padding-top: 30px;">
+                We, WEDDING STORIES, specialize in capturing the special moments of your big day in a way that will last
+                a lifetime. Our team of experienced <br>photographers understands the importance of your wedding day and
+                strives to create images that reflect the beauty, joy, and love that you and your <br>partner share.
+            </div>
+        </div>
+        <div id="photo-album">
+            <img src="../image/photo1.jpg" style="height: 300px;width:400px;" />
+            <img src="../image/photo2.jpg" style="height: 300px;width:400px;" />
+            <img src="../image/photo3.jpeg" style="height: 300px;width:300px;" />
+            <img src="../image/photo4.jpeg" style="height: 300px;width:350px;" />
+            <img src="../image/photo5.jpeg" style="height: 300px;width:300px;" />
+            <img src="../image/photo6.webp" style="height: 300px;width:400px;" />
+            <img src="../image/photo7.jpg" style="height: 300px;width:400px;" />
+            <img src="../image/photo8.jpg" style="height: 300px;width:350px;" />
+            <img src="../image/photo10.jpg" style="height: 300px;width:350px;" />
+            <img src="../image/photo11.jpg" style="height: 300px;width:350px;" />
+            <img src="../image/gall.jpg" style="height: 300px;width:400px;" />
+            <img src="../image/photo1.jpg" style="height: 300px;width:350px;" />
+        
+        </div>
+
+        <% if (images && images.length > 0) { %>
+            <div>
+              <% images.forEach(function(image) { %>
+                <div class="image-container">
+                  <img src="/uploads/<%= image.filename %>" alt="Uploaded Image"  style="height: 300px; width: 350px;">
+                </div>
+              <% }); %>
+            </div>
+          <% } else { %>
+            <p>No images available</p>
+          <% } %>
+        
+    </div>
+    <div id="footer">
+    </div>
+
+    <script src="../script/script.js"> </script>
+</body>
+
+</html>

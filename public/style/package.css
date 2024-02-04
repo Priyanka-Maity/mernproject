@@ -1,0 +1,183 @@
+#package {
+    padding: 0px 20px; 
+}
+
+.line {
+    display: block;
+    position: relative;
+    clear: both;
+    height: 1px;
+    max-width: 175px;
+    margin: 0px auto 5px;
+    background: #f3787a;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+.plan{
+    text-align: center;
+    font-size: 1.3rem;
+}
+.plan-des {
+    margin: 0px auto 50px auto;
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+}
+
+.top-padding {
+    margin-top: 30px;
+}
+
+#plan-des span {
+    font-weight: 650;
+}
+
+#package-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+}
+
+#package-container .container {
+    width: 20%;
+    padding-bottom: 10px;
+    box-shadow: rgb(255, 255, 255) 0px 8px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 8px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#package-container .container .pkg-tag {
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-bottom: 6px;
+    font-weight: 500;
+}
+
+#package-container .container .exc {
+    background-color: gold;
+}
+
+#package-container .container .popu {
+    background-color: blue;
+}
+
+#package-container .container .pricing {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+
+#package-container .container .pricing .category {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#package-container .container .pricing .amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#package-container .container .facilities .services {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#package-container .container .facilities .services span {
+    padding-left: 4px;
+    padding-right: 15px;  
+}
+
+#package-container .container .facilities .even {
+    background-color: #F8F8F8;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+#package-container .container .facilities .services a {
+    text-decoration: none;
+    color: blue;
+}
+
+.popular {
+    text-align: center;
+    padding: 8px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.general {
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    #package {
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #package-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #package-container .container {
+        width: 80%;
+        /* height: 400px; */
+    }
+}
+
+@media (min-width: 601px) and (max-width : 1024px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    #package-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #package-container .container {
+        width: 45%;
+        height: 400px;
+    }
+
+    #package-container .container .facilities .services {
+        padding: 0px;
+        margin-bottom: 8px;
+        padding-bottom: 10px;
+    }
+}

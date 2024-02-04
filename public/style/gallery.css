@@ -1,0 +1,120 @@
+#gallery {
+    padding: 20px;
+    padding-top: 0px;
+}
+body{
+    margin: 0;
+}
+#gallery .gallery-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0px;
+    height: 50px;
+    width: 100%;
+}
+
+#gallery .gallery-top .nav-logo {
+    margin-left: 12px;
+    height: 50px;
+    width: 100px;
+}
+
+#gallery .gallery-top .nav-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+#gallery .gallery-img {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: calc(30% - 0px);
+    height: auto;
+    aspect-ratio: 100 / 50;
+}
+
+#gallery .gallery-img .gal {
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+#gallery .gallery-img .gal-tag {
+    width: 100%;
+    margin-top: 20%;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 5em;
+    font-weight: 600;
+    z-index: 99;
+}
+
+#gallery h1 {
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 10px 40px;
+}
+
+@media (max-width: 600px) {
+
+    p {
+        font-size: 1rem;
+    }
+
+    #gallery .gallery-img .gal-tag {
+        left: 16%;
+        top: 15%;
+        font-size: 2rem;
+    }
+
+    #img-container {
+        width: 95%;
+        margin: 0px auto;
+        background-size: contain;
+
+    }
+
+    #img-container .gallery-col {
+        margin-bottom: 0px;
+    }
+    
+    #img-container .gallery-col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #img-container .img-box {
+        height: 180px;
+        width: 290px;
+        margin-bottom: 20px;
+        background-color: blue;
+    }
+
+    #gallery .gallery-img .gal-tag{
+        left: 0;
+        top: 0;
+    }
+    
+}
+#photo-album{
+    padding-left: 10px;
+}
+.image-container{
+padding-left: 7px;
+    display: inline-block;
+
+}

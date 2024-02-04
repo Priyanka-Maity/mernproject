@@ -1,0 +1,145 @@
+* {
+    scroll-behavior: smooth; 
+ }
+ body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+ #home-container .quotes {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.8rem;
+    word-spacing: 10px;
+}
+
+#home-container .quotes .dec-holder {
+    width: 20%;
+}
+
+#home-container .quotes p{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 40px;
+}
+
+#home-container .quotes img {
+    height: 100%;
+    width: 100%;
+}
+
+#home-container #right-col {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: relative;
+    display: block;
+    box-sizing: content-box;
+    width: calc(95% - 0px);
+    height: auto;
+    aspect-ratio: 150 / 60;
+    object-fit: contain;
+}
+
+/* #show-more {
+    position: absolute;
+    z-index: 999;
+    height: 70px;
+    width: 70px;
+    background-color: aqua;
+    border-radius: 50%;
+    top: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+} */
+ 
+.img1, .img2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+ 
+  
+ .img2 {
+     opacity: 0;
+     z-index: 1;
+     animation: fadeImage 15s infinite;
+ }
+
+ #sc-gallery {
+    display: none;
+ }
+ 
+ @keyframes fadeImage {
+     0% {
+         opacity: 0;
+     }
+     50% {
+         opacity: 1;
+     }
+     100%{
+         opacity: 0;
+     }
+ }
+
+ @media (max-width: 600px){
+
+    #sc-gallery {
+        display: block;
+    }
+
+    #sc-gallery #show-more {
+        text-align: center;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    #sc-gallery #sc-gal-container{
+        margin-top: 20px;
+    }
+
+    #sc-gallery a {
+        text-decoration: none;
+    }
+
+    #home-container #right-col {
+        margin-bottom: 0px;
+    }
+
+    #home-container .quotes {
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        /* font-size: 1rem; */
+        word-spacing: 0px;
+    }
+
+    #home-container .quotes p {
+        /* margin-top: 40px; */
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    #home-container .quotes .dec-holder {
+        width: 50%;
+    }
+ 
+    #home-container #right-col {
+        aspect-ratio: 150 / 80;
+    }
+ 
+ }

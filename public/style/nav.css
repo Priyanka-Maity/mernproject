@@ -1,0 +1,74 @@
+.nav-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    color: black;
+}
+
+.nav-holder .nav-logo {
+    margin-left: 12px;
+    height: 50px;
+    width: 100px;
+    font-family: 'Poltawski Nowy, sans-serif';
+}
+
+.nav-holder .nav-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-holder .toggle-logo{
+    display: none;
+}
+
+.nav-holder .nav-options {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav-holder .nav-options a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-holder .nav-options .nav-ind-options {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-holder .nav-options .nav-ind-options:hover {
+    color: orange;
+} 
+
+@media (max-width: 600px) {
+
+    .nav-holder {
+        padding: 20px 0px;
+    }
+
+    .nav-holder .nav-options {
+        display: none;
+    }
+
+    .nav-holder .toggle-logo {
+        margin-right: 10px;
+        display: block;
+    }
+
+    #dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+    #dropdown a{
+        text-align: center;
+        text-decoration: none;
+    }
+
+}

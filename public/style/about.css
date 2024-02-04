@@ -1,0 +1,258 @@
+.extra {
+    background-color: #f8f8f8;
+}
+
+#about h1 {
+    padding-top: 50px;
+}
+
+#about-container {
+    padding: 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    padding-bottom: 50px;
+}
+
+#about-container .benifit-container {
+    width: 30%;
+     /* border: 1px solid black;  */
+}
+
+#about-container .benifit-container .icon {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 2.5rem;
+    color: #800000;
+    align-items: center;
+}
+
+#about-container .benifit-container .desc {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#about-container .benifit-container span {
+    font-weight: bold;
+}
+
+.members {
+    text-align: center;
+}
+
+.members .ind-member {
+    padding-top: 50px;
+    width: 20%;
+}
+
+.col {
+    justify-content: space-around;
+    display: flex;
+  
+}
+
+.col-1 {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+
+.members .ind-member .dp {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.members .ind-member .dp>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.members .ind-member .name-member {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.ind-member .social {
+    font-size: 1.5rem;
+    color: #f3787a;
+    margin: 10px 60px
+}
+
+.ind-member .social a {
+    text-decoration: none;
+    color: #f3787a;
+}
+
+.ind-member .social a:hover{
+    color: #800000;
+}
+
+.members .ind-member .personal-info {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.members .ind-member .personal-exp {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#sc-members {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    #about h1 {
+        padding-top: 25px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #about-container .benifit-container {
+        width: 40%;
+    }
+
+    #about-container .benifit-container .icon {
+        font-size: 1.5rem;
+    }
+
+    .members {
+         display: none;
+    }
+
+    #sc-members {
+        display: block;
+    }
+}
+#ind-member {
+     padding-top: 50px;
+    width: 80%;
+    display: flex;
+    gap: 200px;
+  /* background-color: #a81717;  */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#ind-member #dp {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#ind-member #dp>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#ind-member .name-member {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#ind-member .social{
+    font-size: 1.5rem;
+    color: #f3787a;
+     margin: 10px 60px 
+}
+
+#ind-member .social a {
+    text-decoration: none;
+    color: #f3787a;
+}
+
+#ind-member .social a:hover{
+    color: #800000;
+}
+
+#ind-member .personal-info {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#ind-member .personal-exp {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+#ind-member .name-member {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#ind-member .social {
+    font-size: 1.5rem;
+    color: #f3787a;
+    margin: 10px 60px
+}
+
+#ind-member .social a {
+    text-decoration: none;
+    color: #f3787a;
+}
+
+#ind-member .social a:hover{
+    color: #800000;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #ind-member {
+        width: 45%;
+        text-align: center;
+        margin-top: 18px;
+    }
+
+    #ind-member .social{
+        display: flex;
+        flex-direction: row;
+        margin: 10px 30px;
+    }
+
+    #ind-member .dp {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    #ind-member .personal-info {
+        font-weight: bold;
+    }
+
+    #ind-member .dp>img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,170 @@
+#contact {
+    margin-bottom: 30px;
+}
+
+#contact div {
+    font-size: 1.2rem;
+
+}
+#contact>h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+#contact span {
+    font-size: 1.5rem;
+}
+
+#contact .plan-des {
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.contact-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.physical-contact , .online-contact {
+    width: 40%;
+}
+
+
+
+.contact-holder {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.contact-holder>div {
+    text-align: left;
+}
+
+.contact-holder>span {
+    margin-right: 20px;
+    color: #f3787a;
+}
+
+.contact-holder a {
+    text-decoration: none;
+}
+
+.physical-contact {
+    border-right: 1px solid #f3787a;
+}
+
+.social {
+    color: #f3787a;
+    margin: 60px;
+}
+
+.social a {
+    color: #f3787a;
+}
+
+.social a:hover {
+    color: #800000;
+}
+
+.social span {
+    padding: 15px;
+}
+
+.social .vendor {
+    color: #800000;
+    margin-top: 25px;
+}
+
+.social .vendor a {
+    text-decoration: none;
+}
+
+.contact-data a {
+    text-decoration: none;
+}
+
+
+#sc-vendor{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #contact div {
+        font-size: 0.8rem;
+    }
+
+    .contact-holder {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px;
+    }
+
+    .contact-holder div {
+        text-align: center;
+    }
+
+    .contact-holder>span {
+        margin-right: 10px;
+        color: #f3787a;
+    }
+
+    .physical-contact {
+        width: 60%;
+    }
+
+    .online-contact {
+        width: 30%;
+    }
+
+    .contact-data {
+        margin-top: 8px;
+        text-align: left;
+    }
+
+    .contact-data a {
+        text-decoration: none;
+    }
+
+    .social {
+        color: #f3787a;
+        /* margin: 30px; */
+        margin-top: 55px;
+        margin-left: 20px;
+    }
+
+    .vendor {
+        display: none;
+    }
+
+    #sc-vendor{
+        margin-top: 8px;
+        display: block;
+        color: #800000;
+    }
+
+    #sc-vendor .company {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #sc-vendor .company a {
+        text-decoration: none;
+    }
+
+}

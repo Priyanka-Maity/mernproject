@@ -1,0 +1,12 @@
+footer {
+    /* height: 40px; */
+    background-color: #800000;
+}
+
+footer>div {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

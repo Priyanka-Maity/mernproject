@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <style>
+    .container {
+      display: flex;
+      margin: 0%;
+    }
+
+    .container-dash {
+      height: 700px;
+      width: 25%;
+      background-color: #800000;
+      text-align: center;
+      align-items: center;
+      margin-right: 30px;
+      padding-top: 30px;
+    }
+    .dash-details {
+      cursor: pointer;
+      padding: 8px;
+     font-size: large;
+     color: #ddd;
+    }
+
+    .dash-body {
+      height: 100%;
+      width: 100%;
+      margin-right: 20px;
+      margin-top: 30px;
+    }
+
+    .content {
+      height: 200px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .content-box {
+      padding: 10px;
+      width: 30%;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 8px;
+      border-radius: 10px 10px 10px 10px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .box {
+      height: auto;
+      width: 32%;
+      margin-top: 30px;
+      text-align: center;
+      box-shadow: rgb(255, 255, 255) 0px 8px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 8px;
+      border-radius: 10px 10px 10px 10px;
+      
+    }
+    h2{
+      color: #800000;
+    }
+    ul{
+      list-style:none;
+    }
+    ul>li{
+      padding-bottom: 7px;
+    }
+    button{
+      background-color: #cb2427;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <div class="container-dash">
+
+    <span class="dash-details">Admin<i class="fas fa-user"></i></span>
+    <p class="dash-details"> Clients</p>
+    <p class="dash-details">Contact Detaails</p>
+    <p class="dash-details"><a style="text-decoration: none; color: #ddd;" href="/home">Component</a>
+    </p>
+  </div>
+  <div class="dash-body">
+    <div class="content">
+      <div class="content-box">
+        <h2>signup <%= Signupno %>
+        </h2>
+      </div>
+      <div class="content-box">
+
+      </div>
+      <div class="content-box"></div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <% if (allSignupData && allSignupData.length> 0) { %>
+          <h3>Customer Contact Details:</h3>
+          <ul>
+            <% allSignupData.forEach(data=> { %>
+              <li>
+                  <p>Number: <%= data && data.number %>
+                  </p>
+              </li>
+              <% }); %>
+          </ul>
+          <% } else { %>
+            <p>No signup data available</p>
+            <% } %>
+      </div>
+      <div class="box">
+        <h3>Upload image</h3>
+        <form action="/admin" method="post" enctype="multipart/form-data">
+          <input type="file" name="fileInputName" accept="image/*">
+          <button  type="submit">Upload Image</button>
+        </form>
+      </div>
+      <div class="box">
+        <h3>Customer Reviews:</h3>
+        <ul>
+            <% UserReview.forEach(review => { %>
+                <li><strong><%= review.user %> </strong> <br>
+                   [ <%= review.address %> ]<br>
+                    <strong>Message:</strong> <%= review.message %> <br>
+                     <%= review.date %></li>
+            <% }); %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
