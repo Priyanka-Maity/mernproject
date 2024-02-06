@@ -20,11 +20,12 @@
       margin-right: 30px;
       padding-top: 30px;
     }
+
     .dash-details {
       cursor: pointer;
       padding: 8px;
-     font-size: large;
-     color: #ddd;
+      font-size: large;
+      color: #ddd;
     }
 
     .dash-body {
@@ -59,27 +60,65 @@
       text-align: center;
       box-shadow: rgb(255, 255, 255) 0px 8px 0px 0px, rgba(0, 0, 0, 0.3) 0px 0px 8px;
       border-radius: 10px 10px 10px 10px;
-      
+
     }
-    h2{
+
+    h2 {
       color: #800000;
     }
-    ul{
-      list-style:none;
+
+    ul {
+      list-style: none;
     }
-    ul>li{
+
+    ul>li {
       padding-bottom: 7px;
     }
-    button{
+
+    button {
       background-color: #cb2427;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
     }
+    .review-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  font-size: 16px;
+  color: #444;
+}
+
+.user-info strong {
+  color: #333;
+  text-align: left;
+}
+
+.address {
+  color: #777;
+}
+
+.message-info {
+  font-size: 14px;
+  color: #666;
+}
+
+.date {
+  color: #888;
+}
+
+.message {
+  margin-top: 5px;
+  display: block;
+}
+
   </style>
 </head>
 
@@ -110,8 +149,8 @@
           <ul>
             <% allSignupData.forEach(data=> { %>
               <li>
-                  <p>Number: <%= data && data.number %>
-                  </p>
+                <p>Number: <%= data && data.number %>
+                </p>
               </li>
               <% }); %>
           </ul>
@@ -123,17 +162,31 @@
         <h3>Upload image</h3>
         <form action="/admin" method="post" enctype="multipart/form-data">
           <input type="file" name="fileInputName" accept="image/*">
-          <button  type="submit">Upload Image</button>
+          <button type="submit">Upload Image</button>
         </form>
       </div>
       <div class="box">
         <h3>Customer Reviews:</h3>
         <ul>
-            <% UserReview.forEach(review => { %>
-                <li><strong><%= review.user %> </strong> <br>
-                   [ <%= review.address %> ]<br>
-                    <strong>Message:</strong> <%= review.message %> <br>
-                     <%= review.date %></li>
+          <% UserReview.forEach(review=> { %>
+            <li>
+              <div class="review-item">
+                <div class="user-info">
+                  <strong>
+                    <%= review.user %>
+                  </strong><br>
+                  <span class="address">[ <%= review.address %> ]</span>
+                </div>
+                <div class="message-info">
+                  <span class="date">
+                    <%= review.date %>
+                  </span><br>
+                  <span class="message"><strong>Message:</strong>
+                    <%= review.message %>
+                  </span>
+                </div>
+              </div>
+            </li>
             <% }); %>
         </ul>
       </div>

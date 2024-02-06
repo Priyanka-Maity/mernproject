@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000 ;
+const port = process.env.PORT || 3000;
 const path = require("path");
 const ejs = require("ejs");
 const { Image, Message } = require("./mongodb");
@@ -29,7 +29,7 @@ const upload = multer({ storage });
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "public", "views"))
 
-app.get("/home",auth, (req, res) => {
+app.get("/home", auth, (req, res) => {
   res.render("home")
 })
 
@@ -51,6 +51,22 @@ app.get("/admin", (req, res) => {
 
 app.get("/review", (req, res) => {
   res.render("review")
+})
+app.get("/logout", auth, async (req, res) => {
+  try {
+
+    req.user.tokens = req.user.tokens.filter((currElement) => {
+      return currElement.token != req.token
+    })
+    res.clearCookie("jwt")
+    console.log("logout success")
+    await req.user.save()
+    res.render("login");
+  }
+  catch (error) {
+    res.status(500).send(error);
+
+  }
 })
 
 app.get("/gallery", async (req, res) => {
@@ -78,10 +94,10 @@ app.post("/signup", async (req, res) => {
     const token = await customerInstance.generateAuthToken();
     console.log(token)
 
-  res.cookie("jwt",token,{
-    expires:new Date(Date.now()+600000),
-    httpOnly:true
-  })
+    res.cookie("jwt", token, {
+      expires: new Date(Date.now() + 600000),
+      httpOnly: true
+    })
     const result = await customerInstance.save();
     console.log("User created:", result);
     res.render("login");
@@ -99,9 +115,9 @@ app.post("/login", async (req, res) => {
     if (check.password === req.body.password) {
       const token = await check.generateAuthToken();
       console.log(token)
-      res.cookie("jwt",token,{
-        expires:new Date(Date.now()+600000),
-        httpOnly:true
+      res.cookie("jwt", token, {
+        expires: new Date(Date.now() + 600000),
+        httpOnly: true
       });
       res.redirect("home");
 

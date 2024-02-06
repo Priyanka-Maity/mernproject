@@ -8,7 +8,10 @@ try{
     console.log(verifyUser);
     const user = await customer.findOne({_id:verifyUser._id});
     console.log(user);
-    next()
+
+    req.token=token;
+    req.user=user;
+    next();
 }
 catch(error){
     res.status(401).send(error);
