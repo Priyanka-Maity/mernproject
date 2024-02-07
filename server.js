@@ -49,7 +49,7 @@ app.get("/admin", (req, res) => {
   res.render("admin")
 });
 
-app.get("/review", (req, res) => {
+app.get("/review",auth, (req, res) => {
   res.render("review")
 })
 app.get("/logout", auth, async (req, res) => {
@@ -133,11 +133,15 @@ app.post("/adminlogin", async (req, res) => {
 
   try {
     const check = await customer.findOne({ name: "Admin" })
-    if (check.password === "admin123") {
+    if (check.password ===req.body.password) {
+      const token = await check.generateAuthToken();
+      res.cookie("jwt", token, {
+        expires: new Date(Date.now() + 600000),
+        httpOnly: true
+      });
       const allSignupData = await customer.find();
       const Signupno = await customer.find().count()
       const UserReview = await Message.find()
-      console.log("please:", UserReview)
       res.render("admin", { allSignupData, Signupno, UserReview });
     } else {
       res.send("Wrong password")
